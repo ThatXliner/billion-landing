@@ -8,12 +8,26 @@
 	--color-executive: #6366f1;
 	--color-case: #0891b2;
 	--color-general: #8a8fa0;
-	--color-text-secondary: #b5bac8;
-	--color-border-subtle: rgba(255, 255, 255, 0.06);
-	--color-border-focus: rgba(255, 255, 255, 0.5);
+	--color-text-secondary: #8a8fa0;
+	--color-border-subtle: rgba(255, 255, 255, 0.08);
+	--color-border-focus: rgba(255, 255, 255, 0.3);
+	--color-success: #10b981;
+	--color-warning: #f59e0b;
+	--color-error: #ef4444;
 	--font-display: 'IBM Plex Serif', Georgia, serif;
 	--font-editorial: 'Inria Serif', 'Times New Roman', serif;
 	--font-body: 'Albert Sans', 'Helvetica Neue', Arial, sans-serif;
+}
+
+@keyframes fadeUp {
+	from {
+		opacity: 0;
+		transform: translateY(16px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
 }
 
 @layer base {
@@ -23,9 +37,10 @@
 
 	body {
 		margin: 0;
-		background: #0e1530;
+		background: var(--color-deep-navy);
 		color: #ffffff;
 		font-family: var(--font-body);
+		-webkit-font-smoothing: antialiased;
 	}
 
 	:focus-visible {
