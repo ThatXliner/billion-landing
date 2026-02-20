@@ -2,6 +2,20 @@
 	let email = $state('');
 	let formStatus = $state<'idle' | 'loading' | 'success' | 'error'>('idle');
 
+	function reveal(node: HTMLElement) {
+		const observer = new IntersectionObserver(
+			([entry]) => {
+				if (entry.isIntersecting) {
+					node.classList.add('visible');
+					observer.disconnect();
+				}
+			},
+			{ threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
+		);
+		observer.observe(node);
+		return { destroy: () => observer.disconnect() };
+	}
+
 	async function handleSubmit(e: SubmitEvent) {
 		e.preventDefault();
 		formStatus = 'loading';
@@ -78,7 +92,7 @@
 	</section>
 
 	<!-- ── PROBLEM ───────────────────────────────────────────── -->
-	<section class="section stagger-1 section--problem">
+	<section class="section section--problem" use:reveal>
 		<div class="problem-grid">
 			<div>
 				<p class="eyebrow">The Problem</p>
@@ -94,7 +108,7 @@
 	</section>
 
 	<!-- ── APPROACH ──────────────────────────────────────────── -->
-	<section class="section stagger-2" id="approach">
+	<section class="section" id="approach" use:reveal>
 		<h2 class="section-headline section-headline--centered">
 			One civic feed.<br />Three source systems.
 		</h2>
@@ -131,7 +145,7 @@
 	</section>
 
 	<!-- ── DUAL LENS ─────────────────────────────────────────── -->
-	<section class="section stagger-3">
+	<section class="section" use:reveal>
 		<p class="eyebrow eyebrow--centered">On every topic, two readings.</p>
 		<h2 class="section-headline section-headline--centered">
 			Multiple viewpoints,<br />equal visual weight.
@@ -171,7 +185,7 @@
 	</section>
 
 	<!-- ── BRADBURY ───────────────────────────────────────────── -->
-	<section class="section stagger-4 section--bradbury">
+	<section class="section section--bradbury" use:reveal>
 		<h2 class="bradbury-headline">
 			Every summary should lead to <em>deeper reading.</em>
 		</h2>
@@ -184,7 +198,7 @@
 	</section>
 
 	<!-- ── WAITLIST ───────────────────────────────────────────── -->
-	<section class="section stagger-5 section--waitlist" id="waitlist">
+	<section class="section section--waitlist" id="waitlist" use:reveal>
 		{#if formStatus === 'success'}
 			<div class="success-block">
 				<div class="success-icon">
@@ -383,13 +397,16 @@
 		margin: 0 auto;
 		padding: 80px 24px;
 		border-top: 1px solid var(--color-border-subtle);
-		animation: fadeUp 0.6s cubic-bezier(0.25, 0.1, 0.25, 1) both;
+		opacity: 0;
+		transform: translateY(20px);
+		transition:
+			opacity 0.6s cubic-bezier(0.25, 0.1, 0.25, 1),
+			transform 0.6s cubic-bezier(0.25, 0.1, 0.25, 1);
 	}
-	.stagger-1 { animation-delay: 0.05s; }
-	.stagger-2 { animation-delay: 0.1s; }
-	.stagger-3 { animation-delay: 0.15s; }
-	.stagger-4 { animation-delay: 0.2s; }
-	.stagger-5 { animation-delay: 0.25s; }
+	:global(.section.visible) {
+		opacity: 1;
+		transform: translateY(0);
+	}
 	@media (min-width: 960px) {
 		.section {
 			padding: 100px 24px;
