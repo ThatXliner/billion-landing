@@ -1,0 +1,35 @@
+@import 'tailwindcss';
+@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500&family=IBM+Plex+Serif:ital,wght@0,700;1,700&family=Inria+Serif:wght@700&display=swap');
+
+@theme {
+	--color-deep-navy: #0e1530;
+	--color-slate: #272d3c;
+	--color-bill: #4a7cff;
+	--color-executive: #6366f1;
+	--color-case: #0891b2;
+	--color-general: #8a8fa0;
+	--color-text-secondary: #b5bac8;
+	--color-border-subtle: rgba(255, 255, 255, 0.06);
+	--color-border-focus: rgba(255, 255, 255, 0.5);
+	--font-display: 'IBM Plex Serif', Georgia, serif;
+	--font-editorial: 'Inria Serif', 'Times New Roman', serif;
+	--font-body: 'Albert Sans', 'Helvetica Neue', Arial, sans-serif;
+}
+
+@layer base {
+	* {
+		box-sizing: border-box;
+	}
+
+	body {
+		margin: 0;
+		background: #0e1530;
+		color: #ffffff;
+		font-family: var(--font-body);
+	}
+
+	:focus-visible {
+		outline: 2px solid var(--color-border-focus);
+		outline-offset: 3px;
+	}
+}
