@@ -48,8 +48,7 @@
 				Know what government is doing before it changes your life.
 			</h1>
 			<p class="hero-sub">
-				Billion turns bills, court cases, and executive actions into short videos and interactive
-				explainers — clear, balanced, and linked to the source.
+				Bills, court cases, and executive actions — explained clearly, linked to the source.
 			</p>
 			<div class="hero-actions">
 				<a class="btn-primary" href="#waitlist">Get Early Access</a>
@@ -101,8 +100,7 @@
 				</h2>
 			</div>
 			<p class="problem-body">
-				Most Americans hear about policy through headlines, not source material. Billion closes that
-				gap — making institutional information readable, watchable, and worth opening.
+				Most people hear about policy through headlines, not source material. Billion closes that gap.
 			</p>
 		</div>
 	</section>
@@ -119,8 +117,7 @@
 				<span class="badge badge--bill">BILL</span>
 				<h3 class="approach-card-title">Congressional Legislation</h3>
 				<p class="approach-card-body">
-					Tracks sponsorship, status, and text changes. Generates explainers only when source
-					content changes — not on a schedule.
+					Tracks sponsorship, status, and text changes. Explainers generate when source content changes — not on a schedule.
 				</p>
 				<p class="approach-stat">4,392 bills tracked in the current Congress</p>
 			</div>
@@ -129,8 +126,7 @@
 				<span class="badge badge--order">ORDER</span>
 				<h3 class="approach-card-title">Executive Actions</h3>
 				<p class="approach-card-body">
-					Orders, memoranda, proclamations, and briefings pulled directly from official White House
-					publications.
+					Orders, memoranda, and proclamations pulled directly from official White House publications.
 				</p>
 			</div>
 
@@ -146,13 +142,12 @@
 
 	<!-- ── DUAL LENS ─────────────────────────────────────────── -->
 	<section class="section" use:reveal>
-		<p class="eyebrow eyebrow--centered">On every topic, two readings.</p>
 		<h2 class="section-headline section-headline--centered">
-			Multiple viewpoints,<br />equal visual weight.
+			Two readings.<br />Every topic.
 		</h2>
 		<p class="section-sub">
-			Billion surfaces analysis from across the political spectrum — side by side, transparently
-			labeled, never merged into a false middle.
+    		Billion surfaces analysis from across the political spectrum — side by side, transparently
+    		labeled, never merged into a false middle.
 		</p>
 
 		<div class="lens-grid">
@@ -163,8 +158,8 @@
 					authority."
 				</blockquote>
 				<p class="lens-body">
-					Frames policy around institutional stability, federalism, and legal precedent established
-					by prior congresses.
+				Frames policy around institutional stability, federalism, and legal precedent established
+				by prior congresses.
 				</p>
 				<p class="lens-source">Re: H.R. 4312 · Institute for Housing Policy Research</p>
 			</div>
@@ -176,8 +171,8 @@
 					scale."
 				</blockquote>
 				<p class="lens-body">
-					Frames policy around impact on households, local economies, and the civil liberties of
-					renters and low-income communities.
+				Frames policy around impact on households, local economies, and the civil liberties of
+				renters and low-income communities.
 				</p>
 				<p class="lens-source">Re: H.R. 4312 · National Housing Justice Coalition</p>
 			</div>
@@ -190,9 +185,9 @@
 			Every summary should lead to <em>deeper reading.</em>
 		</h2>
 		<p class="bradbury-body">
-			We are not a summarization engine. Every piece of content Billion produces functions as an
-			invitation — to the bill text, the filing, the full decision. If you finish reading and feel
-			like you've got the gist, we've failed.
+		We are not a summarization engine.<br/><br/>Every piece of content Billion produces functions as an
+		invitation — to the bill text, the filing, the full decision. If you finish reading and feel
+		like you've got the gist, we've failed.
 		</p>
 		<a class="btn-primary" href="#waitlist">Explore the source</a>
 	</section>
@@ -213,7 +208,7 @@
 			<p class="eyebrow eyebrow--centered">Early Access</p>
 			<h2 class="waitlist-headline">Be first when Billion opens.</h2>
 			<p class="waitlist-sub">
-				Join the waitlist for early access, product updates, and pilot program invites.
+				Early access, updates, and pilot invites.
 			</p>
 			<form class="waitlist-form" onsubmit={handleSubmit}>
 				<label for="email" class="sr-only">Email address</label>
@@ -263,7 +258,7 @@
 		justify-content: space-between;
 		max-width: 1120px;
 		margin: 0 auto;
-		padding: 28px 24px;
+		padding: 20px 24px;
 	}
 	.nav-wordmark {
 		font-family: var(--font-display);
@@ -288,17 +283,17 @@
 	.hero {
 		display: grid;
 		grid-template-columns: 1fr;
-		gap: 56px;
+		gap: 40px;
 		max-width: 1120px;
 		margin: 0 auto;
-		padding: 64px 24px 96px;
+		padding: 48px 24px 72px;
 		animation: fadeUp 0.6s cubic-bezier(0.25, 0.1, 0.25, 1) both;
 	}
 	@media (min-width: 960px) {
 		.hero {
 			grid-template-columns: 1.1fr 0.9fr;
 			align-items: center;
-			padding: 80px 24px 120px;
+			padding: 56px 24px 80px;
 		}
 	}
 
@@ -319,7 +314,7 @@
 		line-height: 1.6;
 		color: var(--color-text-secondary);
 		max-width: 52ch;
-		margin: 0 0 40px;
+		margin: 0 0 28px;
 	}
 	.hero-actions {
 		display: flex;
@@ -373,7 +368,7 @@
 	.card-title {
 		font-family: var(--font-editorial);
 		font-size: 1.1rem;
-		font-weight: 700;
+		font-weight: 400;
 		line-height: 1.35;
 		margin: 0 0 8px;
 		color: #fff;
@@ -395,7 +390,7 @@
 	.section {
 		max-width: 1120px;
 		margin: 0 auto;
-		padding: 80px 24px;
+		padding: 56px 24px;
 		border-top: 1px solid var(--color-border-subtle);
 		opacity: 0;
 		transform: translateY(20px);
@@ -409,7 +404,7 @@
 	}
 	@media (min-width: 960px) {
 		.section {
-			padding: 100px 24px;
+			padding: 72px 24px;
 		}
 	}
 
@@ -427,9 +422,9 @@
 	.section-headline {
 		font-family: var(--font-display);
 		font-size: clamp(1.8rem, 3.5vw, 2.75rem);
-		font-weight: 700;
+		font-weight: 400;
 		line-height: 1.18;
-		letter-spacing: -0.02em;
+		letter-spacing: -0.01em;
 		color: #fff;
 		margin: 0;
 	}
@@ -440,7 +435,7 @@
 		line-height: 1.6;
 		color: var(--color-text-secondary);
 		max-width: 52ch;
-		margin: 20px auto 0;
+		margin: 14px auto 0;
 		text-align: center;
 	}
 
@@ -470,7 +465,7 @@
 
 	/* ── APPROACH ────────────────────────────────────────────── */
 	.approach-grid {
-		margin-top: 56px;
+		margin-top: 40px;
 		display: grid;
 		grid-template-columns: 1fr;
 		gap: 14px;
@@ -519,7 +514,7 @@
 		display: grid;
 		grid-template-columns: 1fr;
 		gap: 14px;
-		margin-top: 48px;
+		margin-top: 32px;
 	}
 	@media (min-width: 720px) {
 		.lens-grid { grid-template-columns: 1fr 1fr; }
@@ -554,7 +549,7 @@
 	.lens-quote {
 		font-family: var(--font-editorial);
 		font-size: 1.15rem;
-		font-weight: 700;
+		font-weight: 400;
 		line-height: 1.45;
 		color: #fff;
 		margin: 0 0 16px;
@@ -577,24 +572,16 @@
 	/* ── BRADBURY ─────────────────────────────────────────────── */
 	.section--bradbury {
 		text-align: center;
-		padding-top: 100px;
-		padding-bottom: 100px;
-	}
-	@media (min-width: 960px) {
-		.section--bradbury {
-			padding-top: 128px;
-			padding-bottom: 128px;
-		}
 	}
 
 	.bradbury-headline {
 		font-family: var(--font-display);
 		font-size: clamp(2rem, 4vw, 3.5rem);
-		font-weight: 700;
+		font-weight: 400;
 		line-height: 1.2;
-		letter-spacing: -0.02em;
+		letter-spacing: -0.01em;
 		color: #fff;
-		margin: 0 auto 28px;
+		margin: 0 auto 20px;
 		max-width: 18ch;
 	}
 	.bradbury-headline em {
@@ -605,14 +592,12 @@
 		line-height: 1.7;
 		color: var(--color-text-secondary);
 		max-width: 48ch;
-		margin: 0 auto 40px;
+		margin: 0 auto 28px;
 	}
 
 	/* ── WAITLIST ─────────────────────────────────────────────── */
 	.section--waitlist {
 		text-align: center;
-		padding-top: 100px;
-		padding-bottom: 140px;
 	}
 
 	.waitlist-headline {
@@ -628,7 +613,7 @@
 		font-size: 18px;
 		line-height: 1.6;
 		color: var(--color-text-secondary);
-		margin: 0 auto 40px;
+		margin: 0 auto 28px;
 		max-width: 44ch;
 	}
 	.waitlist-form {
